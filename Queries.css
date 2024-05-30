@@ -40,8 +40,53 @@
 /* ******************************** */
 @media (max-width: 47.5em) {
   /* 7px/16px =  0.4375*/
-  html {
-    font-size: 43.75%;
+
+  .testimonial {
+    padding: 3rem 4rem;
+  }
+  .testimonials {
+    width: 50rem;
+    grid-template-columns: 1fr;
+  }
+  .testimonial-img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .testimonial-author,
+  .testimonial-statement {
+    font-size: 2rem;
+  }
+  .testimonial-header {
+    margin-bottom: 2rem;
+  }
+  .testimonial-intro {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .testimonial-verified-graduate {
+    font-size: 1.8rem;
+  }
+
+  .testimonial .testimonial--daniel {
+    grid-column: col-start 1 / col-end 1;
+    grid-row: row-start 1 / row-end 1;
+  }
+  .testimonial--jonathan {
+    grid-column: col-start 1 / col-end 1;
+    grid-row: row-start 2 / row-end 2;
+  }
+  .testimonial--kira {
+    grid-column: col-start 1 / col-end 1;
+    grid-row: row-start 3 / row-end 3;
+    line-height: 1.4;
+  }
+  .testimonial--jeanette {
+    grid-column: col-start 1 / col-end 1;
+    grid-row: row-start 4 / row-end 4;
+  }
+  .testimonial--patrick {
+    grid-column: col-start 1 / col-end 1;
+    grid-row: row-start 5 / row-end 5;
   }
 }
 
@@ -52,20 +97,5 @@
   /* 6px/16px =  37.5*/
   html {
     font-size: 37.5%;
-  }
-  .testimonials {
-    grid-template-columns: 1fr;
-  }
-  .testimonial--daniel {
-    grid-column-start: span 1;
-  }
-  .testimonial--kira {
-    grid-row-start: span 1;
-  }
-  .testimonial--jeanette {
-    background: var(--White);
-  }
-  .testimonial--patrick {
-    grid-column-start: span 1;
   }
 }

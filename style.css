@@ -57,7 +57,6 @@ Medium: 11px
 */
 :root {
   --Moderate-violet: hsl(263, 55%, 52%);
-  color: #7541c8;
   --Very-dark-grayish-blue: hsl(217, 19%, 35%);
   --Very-dark-blackish-blue: hsl(219, 29%, 14%);
   --White: hsl(0, 0%, 100%);
@@ -76,12 +75,11 @@ html {
 }
 html,
 body {
-  height: 100%;
-  width: 100%;
-  overflow-x: 100% !important;
+  overflow-x: hidden !important;
 }
 body {
-  font-size: 1.5rem;
+  min-height: 100vh;
+  font-size: 1.3rem;
   font-weight: 400;
   line-height: 1;
   background: var(--Light-grayish-blue);
@@ -90,27 +88,26 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Barlow Semi Condensed", sans-serif;
-  padding: 3rem;
+  padding: 2rem;
 }
 .testimonials {
-  max-width: 140rem;
+  width: 120rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+  grid-template-rows: repeat(4, [row-start] min-content [row-end]);
+  gap: 2rem;
 }
 .testimonial {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 1rem;
-  padding: 2.5rem;
+  padding: 2rem 2.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 9px;
 }
-
 .testimonial-img {
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
   border: 0.2rem solid var(--Light-gray);
 }
@@ -118,7 +115,6 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin-bottom: 1rem;
 }
 .testimonial-author-box {
   display: flex;
@@ -141,7 +137,6 @@ body {
   opacity: 0.5;
 }
 .testimonial-statement {
-  font-size: 1.6rem;
   line-height: 1.4;
 }
 .testimonial--kira .testimonial-intro,
@@ -163,33 +158,32 @@ body {
 }
 .testimonial--daniel {
   background: var(--Moderate-violet);
-  grid-column-start: span 2;
-  position: relative;
+  grid-column: col-start 1 / col-end 2;
+  grid-row: row-start 1 / row-end 1;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 0;
 }
-.quotation {
-  width: 12rem;
-  height: 12rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translateX(-70%);
-  opacity: 0.8;
-  color: #fff;
+.testimonial--jonathan {
+  background: var(--Very-dark-grayish-blue);
+  grid-column: col-start 3 / col-end 3;
+  grid-row: row-start 1 / row-end 1;
 }
 .testimonial--kira {
   background: var(--White);
-  grid-row-start: span 2;
+  grid-column: col-start 4 / col-end 4;
+  grid-row: row-start 1 / row-end 2;
   line-height: 1.4;
 }
 .testimonial--jeanette {
   background: var(--White);
+  grid-column: col-start 1 / col-end 1;
+  grid-row: row-start 2 / row-end 2;
 }
 .testimonial--patrick {
   background: var(--Very-dark-blackish-blue);
-  grid-column-start: span 2;
-}
-.testimonial--jonathan {
-  background: var(--Very-dark-grayish-blue);
+  grid-column: col-start 2 / col-end 3;
+  grid-row: row-start 2 / row-end 2;
 }
 .testimonial--daniel .testimonial-img,
 .testimonial--patrick .testimonial-img {
