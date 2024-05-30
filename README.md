@@ -19,7 +19,7 @@ Thanks for checking out this front-end coding challenge.
 ### Links
 
 - Solution URL: [Github-link](https://github.com/Mikiyas6/testimonials-grid-section-main)
-- Live Site URL: [Page-link](https://mikiyas6.github.io/testimonials-grid-section-main/)
+- Live Site URL: [Page-link](https://github.com/Mikiyas6/testimonials-grid-section-main/deployments/github-pages)
 
 ## My process
 
